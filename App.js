@@ -1,19 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/components/home';
+import { ScrollView, StyleSheet } from 'react-native';
+import Home from './src/components/Home';
+import Constants from 'expo-constants';
 
 export default function App() {
   return (
-    <Home />
+    <ScrollView style={styles.container}>
+      <Home />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
   },
 });
